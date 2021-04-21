@@ -21,13 +21,18 @@ class ttr_helper(object):
         self.Wp = (-10 * np.pi, 10 * np.pi)
         self.ranges = np.array([self.Vx, self.Vy, self.Vz, self.Theta, self.Wt, self.Phi, self.Wp])
         self.state_step_num = np.array([101, 101, 101, 18, 201, 18, 201])
+        
+        # String of folder containing this file
+        curFolder = os.path.dirname(os.path.abspath(__file__))
 
-        self.ttrVxVzThetaWt_filepath = "/local-scratch/xlv/quad_stabilization/ttr_engine/{}/ttrVxVzThetaWt/ttrVxVzThetaWt.mat".format(self.task)
-        self.ttrVyVzPhiWp_filepath   = "/local-scratch/xlv/quad_stabilization/ttr_engine/{}/ttrVyVzPhiWp/ttrVyVzPhiWp.mat".format(self.task)
+        # This is the TTR reward we are supposed to use
+        self.ttrVxVzThetaWt_filepath = curFolder + "/{}/ttrVxVzThetaWt/ttrVxVzThetaWt.mat".format(self.task)
+        self.ttrVyVzPhiWp_filepath   = curFolder + "/ttr_engine/{}/ttrVyVzPhiWp/ttrVyVzPhiWp.mat".format(self.task)
+ 
         print(self.ttrVxVzThetaWt_filepath)
 
-        self.ttrVxVzThetaWt_interp_filepath = "/local-scratch/xlv/quad_stabilization/ttr_engine/{}/ttrVxVzThetaWt/ttrVxVzThetaWt_interp.pkl".format(self.task)
-        self.ttrVyVzPhiWp_interp_filepath   = "/local-scratch/xlv/quad_stabilization/ttr_engine/{}/ttrVyVzPhiWp/ttrVyVzPhiWp_interp.pkl".format(self.task)
+        self.ttrVxVzThetaWt_interp_filepath = curFolder + "/{}/ttrVxVzThetaWt/ttrVxVzThetaWt_interp.pkl".format(self.task)
+        self.ttrVyVzPhiWp_interp_filepath   = curFolder + "/{}/ttrVyVzPhiWp/ttrVyVzPhiWp_interp.pkl".format(self.task)
 
 
         self.fill_value = 1.0
