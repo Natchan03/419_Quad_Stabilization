@@ -15,7 +15,8 @@ r1 = 0.1; % goal radius of Vy
 c1 = 0.0; % goal center of Vy
 
 r2 = 0.1; % goal radius of Vz
-c2 = 1.0; % goal center of Vz (for takeoff)
+% c2 = 1.0; % goal center of Vz (for takeoff)
+c2 = 0.0;
 
 r3 = pi/18; % goal radius of Theta
 c3 = 0.0; % goal center of Theta
