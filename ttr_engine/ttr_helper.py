@@ -27,7 +27,7 @@ class ttr_helper(object):
 
         # This is the TTR reward we are supposed to use
         self.ttrVxVzThetaWt_filepath = curFolder + "/{}/ttrVxVzThetaWt/ttrVxVzThetaWt.mat".format(self.task)
-        self.ttrVyVzPhiWp_filepath   = curFolder + "/ttr_engine/{}/ttrVyVzPhiWp/ttrVyVzPhiWp.mat".format(self.task)
+        self.ttrVyVzPhiWp_filepath   = curFolder + "/{}/ttrVyVzPhiWp/ttrVyVzPhiWp.mat".format(self.task)
  
         print(self.ttrVxVzThetaWt_filepath)
 

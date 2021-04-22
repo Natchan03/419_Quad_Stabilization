@@ -78,6 +78,8 @@ tic;
 mexLFsweep(phi,xs,dx,T1Max,T2Max, T1Min, T2Min,m,transDrag,rotDrag,L,Ixx,grav,numIter,TOL);
 toc;
 
+% saves phi to .mat file
+save('ttrVyVzPhiWp.mat', 'phi');
 
 endTime = cputime;
 fprintf('Total execution time %g seconds', endTime - startTime);

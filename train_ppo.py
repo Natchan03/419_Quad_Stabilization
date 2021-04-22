@@ -113,21 +113,24 @@ if __name__ == "__main__":
             ppo_params_json = './ppo1/ppo_params.json'
 
             # --- Start to train the policy from scratch ---
-            # env = gym.make(args['gym_env'], rew=args['rew_type'])
-            # trained_policy = run(env=env, algorithm=ppo, params=ppo_params_json, args=args)
-            # trained_policy.save_model(args['MODEL_DIR'])
+            env = gym.make(args['gym_env'], rew=args['rew_type'])
+            trained_policy = run(env=env, algorithm=ppo, params=ppo_params_json, args=args)
+            trained_policy.save_model(args['MODEL_DIR'])
 
             # --- Load pre-trained model for evaluation ---
             # LOAD_DIR = os.environ['PROJ_HOME_3'] + '/runs_log_tests/grad_norm_0.5_kl_0.015_std_0.5_baseline/27-Jan-2020_01-44-06DubinsCarEnv-v0_hand_craft_ppo/model'
             # LOAD_DIR =  os.environ['PROJ_HOME_3'] + '/runs_log_tests/grad_norm_0.5_kl_0.015_std_0.5_fixed_value_vi/23-Jan-2020_00-13-24DubinsCarEnv-v0_hand_craft_ppo_vf_boltzmann/model'
             # eval_policy = run(env=env, algorithm=ppo, params=ppo_params_json, load=True, loadpath=LOAD_DIR, loaditer=180, args=args)
 
+            # String of folder containing this file
+            curFolder = os.path.dirname(os.path.abspath(__file__))
+
             # --- Load pre-trained model and continue training ---
-            env = gym.make(args['gym_env'], rew=args['rew_type'])
-            LOAD_DIR = '/local-scratch/xlv/quad_stabilization' + '/runs_log_tests/18-Apr-2020_00-22-43QuadTakeOffHoverEnv-v0_ppo/model'
-            trained_policy = run(env=env, algorithm=ppo, params=ppo_params_json, load=True, loadpath=LOAD_DIR,
-                              loaditer=420, args=args)
-            trained_policy.save_model(args['MODEL_DIR'])
+            # env = gym.make(args['gym_env'], rew=args['rew_type'])
+            # LOAD_DIR = curFolder + '/runs_log_tests/18-Apr-2020_00-22-43QuadTakeOffHoverEnv-v0_ppo/model'
+            # trained_policy = run(env=env, algorithm=ppo, params=ppo_params_json, load=True, loadpath=LOAD_DIR,
+            #                   loaditer=420, args=args)
+            # trained_policy.save_model(args['MODEL_DIR'])
         else:
             raise ValueError("arg algorithm is invalid!")
 
