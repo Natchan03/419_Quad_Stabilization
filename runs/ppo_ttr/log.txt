@@ -1,0 +1,262 @@
+Logging to /home/nat/419_QS/runs/ppo_ttr
+---------------------------------
+| algo | ppo                    |
+| env  | QuadTakeOffHoverEnv-v0 |
+---------------------------------
+i am using mlppolicy
+load_state method is deprecated, please use load_variables instead
+save_state method is deprecated, please use save_variables instead
+we continue to train from a loaded model ...
+i am using mlppolicy
+trainable variables: [<tf.Variable 'pi/vf/fc1/kernel:0' shape=(10, 64) dtype=float32_ref>, <tf.Variable 'pi/vf/fc1/bias:0' shape=(64,) dtype=float32_ref>, <tf.Variable 'pi/vf/fc2/kernel:0' shape=(64, 64) dtype=float32_ref>, <tf.Variable 'pi/vf/fc2/bias:0' shape=(64,) dtype=float32_ref>, <tf.Variable 'pi/vf/final/kernel:0' shape=(64, 1) dtype=float32_ref>, <tf.Variable 'pi/vf/final/bias:0' shape=(1,) dtype=float32_ref>, <tf.Variable 'pi/pol/fc1/kernel:0' shape=(10, 64) dtype=float32_ref>, <tf.Variable 'pi/pol/fc1/bias:0' shape=(64,) dtype=float32_ref>, <tf.Variable 'pi/pol/fc2/kernel:0' shape=(64, 64) dtype=float32_ref>, <tf.Variable 'pi/pol/fc2/bias:0' shape=(64,) dtype=float32_ref>, <tf.Variable 'pi/pol/final/kernel:0' shape=(64, 4) dtype=float32_ref>, <tf.Variable 'pi/pol/final/bias:0' shape=(4,) dtype=float32_ref>]
+********** Iteration 1 ************
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Optimizing...
+     pol_surr |    pol_entpen |       vf_loss |            kl |           ent
+Evaluating losses...
+     -0.03334 |       0.00000 |      1.25e+04 |       0.01197 |       2.91575
+---------------------------------
+| EpisodesSoFar     | 37        |
+| EpLenMean         | 27.6      |
+| EpRewMean         | -315      |
+| EpRewMeanThisIter | -315      |
+| EpSuccessSoFar    | 0         |
+| EpSuccessThisIter | 0         |
+| EpThisIter        | 37        |
+| ev_tdlam_before   | -0.000813 |
+| loss_ent          | 2.92      |
+| loss_kl           | 0.012     |
+| loss_pol_entpen   | 0         |
+| loss_pol_surr     | -0.0333   |
+| loss_vf_loss      | 1.25e+04  |
+| SucRateSoFar      | 0         |
+| SucRateThisIter   | 0         |
+| TimeElapsed       | 76.5      |
+| TimestepsSoFar    | 1.02e+03  |
+---------------------------------
+********** Iteration 2 ************
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Optimizing...
+     pol_surr |    pol_entpen |       vf_loss |            kl |           ent
+Evaluating losses...
+     -0.03091 |       0.00000 |      1.25e+04 |       0.01477 |       2.91575
+--------------------------------
+| EpisodesSoFar     | 74       |
+| EpLenMean         | 27.6     |
+| EpRewMean         | -318     |
+| EpRewMeanThisIter | -320     |
+| EpSuccessSoFar    | 0        |
+| EpSuccessThisIter | 0        |
+| EpThisIter        | 37       |
+| ev_tdlam_before   | -5.9e-05 |
+| loss_ent          | 2.92     |
+| loss_kl           | 0.0148   |
+| loss_pol_entpen   | 0        |
+| loss_pol_surr     | -0.0309  |
+| loss_vf_loss      | 1.25e+04 |
+| SucRateSoFar      | 0        |
+| SucRateThisIter   | 0        |
+| TimeElapsed       | 150      |
+| TimestepsSoFar    | 2.04e+03 |
+--------------------------------
+********** Iteration 3 ************
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Optimizing...
+     pol_surr |    pol_entpen |       vf_loss |            kl |           ent
+Evaluating losses...
+     -0.02477 |       0.00000 |      1.21e+04 |       0.01249 |       2.91575
+--------------------------------
+| EpisodesSoFar     | 111      |
+| EpLenMean         | 27.9     |
+| EpRewMean         | -318     |
+| EpRewMeanThisIter | -313     |
+| EpSuccessSoFar    | 0        |
+| EpSuccessThisIter | 0        |
+| EpThisIter        | 37       |
+| ev_tdlam_before   | 8.94e-06 |
+| loss_ent          | 2.92     |
+| loss_kl           | 0.0125   |
+| loss_pol_entpen   | 0        |
+| loss_pol_surr     | -0.0248  |
+| loss_vf_loss      | 1.21e+04 |
+| SucRateSoFar      | 0        |
+| SucRateThisIter   | 0        |
+| TimeElapsed       | 225      |
+| TimestepsSoFar    | 3.06e+03 |
+--------------------------------
+********** Iteration 4 ************
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Optimizing...
+     pol_surr |    pol_entpen |       vf_loss |            kl |           ent
+Evaluating losses...
+     -0.03374 |       0.00000 |      1.02e+04 |       0.01424 |       2.91575
+--------------------------------
+| EpisodesSoFar     | 150      |
+| EpLenMean         | 27.2     |
+| EpRewMean         | -312     |
+| EpRewMeanThisIter | -302     |
+| EpSuccessSoFar    | 0        |
+| EpSuccessThisIter | 0        |
+| EpThisIter        | 39       |
+| ev_tdlam_before   | 0.000209 |
+| loss_ent          | 2.92     |
+| loss_kl           | 0.0142   |
+| loss_pol_entpen   | 0        |
+| loss_pol_surr     | -0.0337  |
+| loss_vf_loss      | 1.02e+04 |
+| SucRateSoFar      | 0        |
+| SucRateThisIter   | 0        |
+| TimeElapsed       | 299      |
+| TimestepsSoFar    | 4.09e+03 |
+--------------------------------
+********** Iteration 5 ************
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Optimizing...
+     pol_surr |    pol_entpen |       vf_loss |            kl |           ent
+Evaluating losses...
+     -0.03011 |       0.00000 |      1.40e+04 |       0.02056 |       2.91575
+---------------------------------
+| EpisodesSoFar     | 187       |
+| EpLenMean         | 26.9      |
+| EpRewMean         | -317      |
+| EpRewMeanThisIter | -330      |
+| EpSuccessSoFar    | 0         |
+| EpSuccessThisIter | 0         |
+| EpThisIter        | 37        |
+| ev_tdlam_before   | -4.64e-05 |
+| loss_ent          | 2.92      |
+| loss_kl           | 0.0206    |
+| loss_pol_entpen   | 0         |
+| loss_pol_surr     | -0.0301   |
+| loss_vf_loss      | 1.4e+04   |
+| SucRateSoFar      | 0         |
+| SucRateThisIter   | 0         |
+| TimeElapsed       | 374       |
+| TimestepsSoFar    | 5.12e+03  |
+---------------------------------
+********** Iteration 6 ************
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Optimizing...
+     pol_surr |    pol_entpen |       vf_loss |            kl |           ent
+Evaluating losses...
+     -0.03332 |       0.00000 |      1.14e+04 |       0.01540 |       2.91575
+--------------------------------
+| EpisodesSoFar     | 224      |
+| EpLenMean         | 27.1     |
+| EpRewMean         | -317     |
+| EpRewMeanThisIter | -315     |
+| EpSuccessSoFar    | 0        |
+| EpSuccessThisIter | 0        |
+| EpThisIter        | 37       |
+| ev_tdlam_before   | 0.000145 |
+| loss_ent          | 2.92     |
+| loss_kl           | 0.0154   |
+| loss_pol_entpen   | 0        |
+| loss_pol_surr     | -0.0333  |
+| loss_vf_loss      | 1.14e+04 |
+| SucRateSoFar      | 0        |
+| SucRateThisIter   | 0        |
+| TimeElapsed       | 448      |
+| TimestepsSoFar    | 6.11e+03 |
+--------------------------------
+********** Iteration 7 ************
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!
+Failed to take off!

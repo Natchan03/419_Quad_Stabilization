@@ -104,5 +104,10 @@ class MlpPolicy(object):
         U.load_state(dirname)
         print('Loaded!')
 
+    def load_model_from_path(self, pathName):
+        print('Loading model from %s' % pathName)
+        U.load_state(pathName)
+        print('Loaded!')
+
     def print_model_details(self):
         U.display_var_info(self.get_trainable_variables())
