@@ -296,7 +296,7 @@ def ppo_learn(env, policy,
             logger.dump_tabular()
 
         """ Evaluation """
-        EVALUATION_FREQUENCY = 25  # originally 10, but I changed it
+        EVALUATION_FREQUENCY = 40  # originally 10, but I changed it
         if iters_so_far % EVALUATION_FREQUENCY == 0:
 
             eval_max_iters = 5
@@ -350,7 +350,7 @@ def ppo_learn(env, policy,
             eval_suc_buffer.append(eval_success_episodes_so_far * 1.0 / eval_episodes_so_far)
 
         """ Saving model and statistics """
-        MODEL_SAVING_FREQ = 10  # 30 is enough for some learning, but 10 is better for me
+        MODEL_SAVING_FREQ = 1  # 30 is enough for some learning, but using 1 since the program frequently freezes for me
         if iters_so_far % MODEL_SAVING_FREQ == 0:
             pi.save_model(args['MODEL_DIR'], iteration=iters_so_far)
 
@@ -363,7 +363,7 @@ def ppo_learn(env, policy,
                 pickle.dump(eval_success_rates, f_eval)
 
         """ Plotting and saving statistics """
-        PLOT_FREQUENCY = 10 # 10
+        PLOT_FREQUENCY = 5 # Originally 10
         if iters_so_far % PLOT_FREQUENCY == 0:
             # plot training reward performance
             train_plot_x = np.arange(len(ep_mean_rews)) + 1
