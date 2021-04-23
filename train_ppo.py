@@ -114,7 +114,7 @@ if __name__ == "__main__":
         # --- logger initialize and configuration ---
         RUN_DIR = MODEL_DIR = FIGURE_DIR = RESULT_DIR = None
         if args['algo'] == "ppo":
-            RUN_DIR = os.path.join(os.getcwd(), 'runs', 'ppo_ttr' + curRun)
+            RUN_DIR = os.path.join(os.getcwd(), 'runs', 'run' + curRun)
             MODEL_DIR = os.path.join(RUN_DIR, 'model')
             FIGURE_DIR = os.path.join(RUN_DIR, 'figure')
             RESULT_DIR = os.path.join(RUN_DIR, 'result')
@@ -154,7 +154,7 @@ if __name__ == "__main__":
 
             # --- Load pre-trained model and continue training---
             env = gym.make(args['gym_env'], rew=args['rew_type'])
-            LOAD_DIR = curFolder + '/runs/ppo_ttr' + lastRun + '/model'
+            LOAD_DIR = curFolder + '/runs/run' + lastRun + '/model'
             trained_policy = run(env=env, algorithm=ppo, params=ppo_params_json, load=True, loadpath=LOAD_DIR,
                               loaditer=None, args=args) # loaditer is None to load trained_model file
             trained_policy.save_model(args['MODEL_DIR'])
