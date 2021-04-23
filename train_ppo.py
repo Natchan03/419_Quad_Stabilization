@@ -28,13 +28,20 @@ def getLastCheckpoint(load_dir):
 # Reads the last run number and increments it
 def getLastRun():
     runNumPath = os.path.dirname(os.path.abspath(__file__)) + '/runs/lastRun'
+    with open(runNumPath, 'r') as f:
+        lastRun = f.readline()
+        lastRun = lastRun.rstrip('\n').rstrip('\r')
+        return lastRun
+
+def updateRun():
+    runNumPath = os.path.dirname(os.path.abspath(__file__)) + '/runs/lastRun'
     with open(runNumPath, 'r+') as f:
         lastRun = f.readline()
+        lastRun = lastRun.rstrip("\n").rstrip('\r')
         curRun = str(int(lastRun) + 1)
         f.seek(0)
         f.write(curRun)
         f.truncate()
-        return lastRun
 
 def run(env, algorithm, args, params=None, load=False, loadpath=None, loaditer=None, save_obs=False):
 
@@ -155,6 +162,7 @@ if __name__ == "__main__":
             # --- Load pre-trained model and continue training---
             env = gym.make(args['gym_env'], rew=args['rew_type'])
             LOAD_DIR = curFolder + '/runs/run' + lastRun + '/model'
+            updateRun()
             trained_policy = run(env=env, algorithm=ppo, params=ppo_params_json, load=True, loadpath=LOAD_DIR,
                               loaditer=None, args=args) # loaditer is None to load trained_model file
             trained_policy.save_model(args['MODEL_DIR'])
