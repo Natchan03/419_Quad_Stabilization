@@ -1,12 +1,12 @@
 {
   "num_iters":10,
-  "num_ppo_iters":20,
-  "timesteps_per_actorbatch":1024,
+  "num_ppo_iters":1000,
+  "timesteps_per_actorbatch":2000,
   "clip_param":0.2,
   "entcoeff":0.0,
-  "optim_epochs":10,
+  "optim_epochs":20,
   "optim_stepsize":3e-4,
-  "optim_batchsize":64,
+  "optim_batchsize":128,
   "gamma":0.998,
   "lam":0.95
 }
