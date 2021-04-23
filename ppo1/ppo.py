@@ -296,7 +296,7 @@ def ppo_learn(env, policy,
             logger.dump_tabular()
 
         """ Evaluation """
-        EVALUATION_FREQUENCY = 10  # 10
+        EVALUATION_FREQUENCY = 25  # originally 10, but I changed it
         if iters_so_far % EVALUATION_FREQUENCY == 0:
 
             eval_max_iters = 5
@@ -350,7 +350,7 @@ def ppo_learn(env, policy,
             eval_suc_buffer.append(eval_success_episodes_so_far * 1.0 / eval_episodes_so_far)
 
         """ Saving model and statistics """
-        MODEL_SAVING_FREQ = 30  # 30 is enough for some learning
+        MODEL_SAVING_FREQ = 10  # 30 is enough for some learning, but 10 is better for me
         if iters_so_far % MODEL_SAVING_FREQ == 0:
             pi.save_model(args['MODEL_DIR'], iteration=iters_so_far)
 
