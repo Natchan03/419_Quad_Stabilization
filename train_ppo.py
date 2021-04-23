@@ -30,7 +30,7 @@ def getLastRun():
     runNumPath = os.path.dirname(os.path.abspath(__file__)) + '/runs/lastRun'
     with open(runNumPath, 'r+') as f:
         lastRun = f.readline()
-        curRun = str(int(num) + 1)
+        curRun = str(int(lastRun) + 1)
         f.seek(0)
         f.write(curRun)
         f.truncate()
